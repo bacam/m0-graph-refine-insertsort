@@ -15,6 +15,6 @@ arm-none-eabi-objdump -d "$BASE" > "$BASE.elf.txt"
 arm-none-eabi-objdump -t "$BASE" > "$BASE.elf.symtab"
 #arm-none-eabi-objdump -z -D -j .rodata "$BASE" > "$BASE.elf.rodata"
 c-parser --mmbytes "$BASE.c" > "$BASE.sigs"
-$HOL/examples/machine-code/graph/decompile.py insertsort --ignore main
+$HOL/examples/machine-code/graph/decompile.py "$BASE" --ignore main
 isabelle build -v -d "$SEL4/l4v" -c -d . Export
 python "$GRAPH_REFINE/graph-refine.py" . all
