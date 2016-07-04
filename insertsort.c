@@ -93,7 +93,7 @@ int sort(unsigned int *a)
 }
 
 int main(void) {
-  sort(a);
+  return sort(a);
 }
 
 

@@ -47,7 +47,7 @@ print 'Checking.'
 syntax.check_funs (functions)
 
 def asm_split_pairings ():
-	pairs = [(s, 'Insertsort.' + s) for s in ['sort2','sort']]
+	pairs = [(s, 'Insertsort.' + s) for s in ['sort2','sort','main']]
 	target_objects.use_hooks.add ('stack_logic')
 	import stack_logic
 
